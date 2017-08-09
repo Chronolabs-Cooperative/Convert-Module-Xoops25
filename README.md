@@ -69,15 +69,15 @@ This is all that is involved in configuring apache 2 httpd on Debian/Ubuntu, the
 The following .htaccess goes in /var/www/font-converter
 
     RewriteEngine On
-    RewriteRule ^convert/preview/(.*?).png                  	./modules/convert/preview.php?id=$1             	[L,NC,QSA]
-    RewriteRule ^convert/naming/(.*?).png                       ./modules/convert/naming.php?id=$1                      [L,NC,QSA]
-    RewriteRule ^convert/glyph/(.*?)-([0-9]+).png               ./modules/convert/glyph.php?id=$1&char=$2               [L,NC,QSA]
-    RewriteRule ^convert/font/(.*?)/(.*?).html                  ./modules/convert/font.php?id=$2                        [L,NC,QSA]
-    RewriteRule ^convert/([0-9]+)/([0-9]+)/history.html$        ./modules/convert/history.php?start=$1&limit=$2   	[L,NC,QSA]
-    RewriteRule ^convert/css/font/(.*?).([a-z0-9]+)$          	./modules/convert/css-font.php?id=$1&format=$2   	[L,NC,QSA]
-    RewriteRule ^convert/css/(.*?).css$            		./modules/convert/css.php?id=$1   			[L,NC,QSA]
-    RewriteRule ^convert/index.html$                            ./modules/convert/index.php                             [L,NC,QSA]
-    RewriteRule ^convert/upload.html$                           ./modules/convert/upload.php                            [L,NC,QSA]
+    RewriteRule ^convert/preview/(.*?).png			./modules/convert/preview.php?id=$1		[L,NC,QSA]
+    RewriteRule ^convert/naming/(.*?).png			./modules/convert/naming.php?id=$1		[L,NC,QSA]
+    RewriteRule ^convert/glyph/(.*?)-([0-9]+).png		./modules/convert/glyph.php?id=$1&char=$2	[L,NC,QSA]
+    RewriteRule ^convert/font/(.*?)/(.*?).html			./modules/convert/font.php?id=$2		[L,NC,QSA]
+    RewriteRule ^convert/([0-9]+)/([0-9]+)/history.html$	./modules/convert/history.php?start=$1&limit=$2	[L,NC,QSA]
+    RewriteRule ^convert/css/font/(.*?).([a-z0-9]+)$		./modules/convert/css-font.php?id=$1&format=$2	[L,NC,QSA]
+    RewriteRule ^convert/css/(.*?).css$				./modules/convert/css.php?id=$1			[L,NC,QSA]
+    RewriteRule ^convert/index.html$				./modules/convert/index.php			[L,NC,QSA]
+    RewriteRule ^convert/upload.html$				./modules/convert/upload.php			[L,NC,QSA]
 
 # Configuring MySQL
 You will need to use with either MySQL Workbench or PHPMyAdmin create a MySQL Database for the fonting repository services API. You will find in the path of /sql the sql dump files for the database for the API.
