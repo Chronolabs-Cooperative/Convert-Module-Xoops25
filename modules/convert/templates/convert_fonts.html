@@ -1,0 +1,64 @@
+<h1><{$font.name}></h1>
+<p>Licensing Name: <{$license}><br/>
+Licensing Code: <{$licensecode}><br/>
+<br/>
+Licensed Name: <em><{$upload.name}></em><br/>
+Licensed Organisation: <em><{$upload.company}></em><br/>
+<br/>
+Download File: <a href="<{$download}>" target="_blank"><{$pack}></a><br/>
+Download Size: <{$zipbytes}> bytes<br/>
+Number of Files: <{$zipfiles}><br/>
+</p>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear: both; height: auto; margin-top: 7px;"><h2>Preview of font: <{$font.name}></h2><center><img src="<{$preview}>" width="98%" /></center></div>
+<{if isset($cssdata)}>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear: both; height: auto; margin-top: 13px;"><h2>CSS for Fonts API Inclusion</h2>
+	<h3>Method One with CSS</h3>
+	<p>You can include the following statement in a css call to pull the font from the API Repository:-<br />
+		<pre>
+			@import url("<{$cssdata.url}>");
+		</pre>
+	</p>
+	<h3>Method Two with CSS</h3>
+	<p>You can include the following statement in a css call to pull the font from the API Repository:-<br />
+		<pre>
+			<{$cssdata.code}>
+		</pre>
+	</p>
+</div>
+<{/if}>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear: both; height: auto; margin-top: 13px;"><h2>Files in pack with <{$font.name}></h2>
+	<table>
+ 	<thead>
+ 		<tr class="head">
+ 			<td>Path</td>
+ 			<td>File</td>
+ 			<td>extension</td>
+ 			<td>bytes</td>
+ 		</tr>
+ 	</thead>
+ 	<tbody>
+ 	<{foreach from=$files item=file}>
+ 	<tr class="<{cycle values='even,odd'}>0">
+ 		<td><{$file.path}></td>
+ 		<td><{$file.file}></td>
+ 		<td><{$file.extension}></td>
+ 		<td><{$file.bytes}></td>
+ 	</tr>
+ 	<{/foreach}>
+ 	</tbody>
+ </table>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear: both; height: auto; margin-top: 13px;"><h2>Several glyph for <{$font.name}></h2><br/>
+		<{foreach from=$glyphs item=glyph}>
+			<img src="<{$glyph}>" style="margin: auto 4px; padding: 3px; float: left; display: block; position: relative;" />
+		<{/foreach}>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear: both; height: auto; margin-top: 13px;"><h3>File: ACADEMIC</h3><blockquote><{$licensetxt.academic}></blockquote></div>
+<div style="clear: both; height: auto; margin-top: 13px;"><h3>File: LICENSE</h3><blockquote><{$licensetxt.license}></blockquote></div>
+

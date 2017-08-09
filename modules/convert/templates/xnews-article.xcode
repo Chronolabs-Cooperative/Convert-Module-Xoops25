@@ -1,0 +1,15 @@
+[center][size=xlarge][b][u]%fontname%[/b][/u][/size][/center]
+
+[size=medium][b]
+Licensing Name: %license%
+Licensing Code: %licensecode%
+
+Licensed Name: [i][u]%uploadname%[/u][/i]
+Licensed Organisation: [i][u]%uploadorg%[/u][/i]
+Uploaded When: [i]%uploadwhen%[/i]
+
+Download File: [url=%downloadurl%]%downloadfile%[/url]
+Download Size: %downloadsize% bytes
+Number of Files: %numberfiles%[/b][/size]
+
+[center][img width=735]%previewurl%[/img][/center]

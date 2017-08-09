@@ -1,0 +1,48 @@
+<h1>History of Font Conversion from Latest</h1>
+<div style="width: 100%;">
+	<div style="width: auto; float: right; margin-right: 32px;"><{$pagenav}></div>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<table>
+	<{foreach from=$fonts item=font}>
+	<tr class="<{cycle values='even,odd'}>">
+		<td>
+			<table width="100%;">
+				<tr>
+					<td class="head" style="font-size: 1.8310em !important;">Name:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><a href="<{$font.urls.display}>" target="_blank"><{$font.font.name}></a></td>
+					<td class="head" style="font-size: 1.8310em !important;">Version:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.font.version}></td>
+				</tr>
+				<tr>
+					<td class="head" style="font-size: 1.8310em !important;">Download:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><a href="<{$font.urls.download}>" target="_blank"><{$font.font.pack}></a></td>
+					<td class="head" style="font-size: 1.8310em !important;">License:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.font.license.code}></td>
+				</tr>
+				<tr>
+					<td class="head" style="font-size: 1.8310em !important;">Downloads:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.io.downloads}></td>
+					<td class="head" style="font-size: 1.8310em !important;">Zip Size:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.font.zip.mbs}> Mb(s)</td>
+				</tr>
+				<tr>
+					<td class="head" style="font-size: 1.8310em !important;">Licensee:&nbsp;</td>
+					<td colspan="3" style="font-size: 1.8310em !important;"><{$font.font.uploader.name}> [ <{$font.font.uploader.company}> ]</td>
+				</tr>
+				<tr>
+					<td class="head" style="font-size: 1.8310em !important;">Uploaded:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.io.uploaded}></td>
+					<td class="head" style="font-size: 1.8310em !important;">Downloaded Last:&nbsp;</td>
+					<td style="font-size: 1.8310em !important;"><{$font.io.downloaded}></td>
+				</tr>
+			</table>
+		</td>
+		<td style="width: 56%; vertical-align: middle;"><a href="<{$font.urls.display}>" target="_blank"><img src="<{$font.urls.naming}>" width="100%" style="position: relative; left: -34px;"/></a></td>
+	</tr>
+	<{/foreach}>
+</table>
+<div style="clear:both;">&nbsp;</div>
+<div>
+	<div style="margin-left: 32px; width: auto; float: left;"><{$pagenav}></div>
+</div>
