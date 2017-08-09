@@ -84,8 +84,6 @@ You will need to use with either MySQL Workbench or PHPMyAdmin create a MySQL Da
 
 You will need to restore these with either import with MySQL Workbench or within the database on PHPMyAdmin uploading each SQL to create the tables required.
 
-You will also have to create a username which all these details are stored on /var/www/fonts-api/class/fontages.php which contains the configuration for MySQL, Database + Username and Password for the API.
-
 You may also depending on your memory limits edit the settings in /etc/mysql/mysql.conf.d/mysqld.cnf and then reload and restart the mysql service, this is so that mysql not only uses less CPU it also means it will be running properly with little scape for error or crashing.
 
 ## Configuring CPU throttling (CPULimit)
